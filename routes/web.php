@@ -43,11 +43,11 @@ Route::group([
     Route::get('/show/{advert}', 'AdvertController@show')->name('show');
     Route::post('/show/{advert}/phone', 'AdvertController@phone')->name('phone');
     Route::get('/all/{category?}', 'AdvertController@index')->name('index.all');
-   // Route::get('/{region?}/{category}', 'AdvertController@index')->name('index');
+    Route::get('/{region?}/{category}', 'AdvertController@index')->name('index');
     Route::post('/show/{advert}/favorites', 'FavoriteController@add')->name('favorites');
     Route::delete('/show/{advert}/favorites', 'FavoriteController@remove');
 
-   // Route::get('/{adverts_path?}', 'AdvertController@index')->name('index')->where('adverts_path', '.+');
+//Route::get('/{adverts_path?}', 'AdvertController@index')->name('index')->where('adverts_path', '.+');
 });
 
 

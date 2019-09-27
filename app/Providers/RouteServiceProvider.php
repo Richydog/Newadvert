@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-
+use App\Http\Router\AdvertsPath;
 class RouteServiceProvider extends ServiceProvider
 {
     /**
@@ -26,6 +26,11 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
+
+
+
+        Route::model('adverts_path', AdvertsPath::class);
+       // Route::model('page_path', PagePath::class);
     }
 
     /**

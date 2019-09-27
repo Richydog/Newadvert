@@ -78,14 +78,14 @@ class AdvertController extends Controller
         return $advert->user->phone;
     }*/
 
-   public function index(Region $region=null,Category $category=null){
+   public function index(AdvertsPath $path){
        $query=Advert::active()->with(['category','region'])->orderByDesc('id');
 
 
-       if ($category){
+       if ($category=$path->category){
            $query->forCategory($category);
        }
-        if ($region){
+        if ($region=$path->region){
           $query->forRegion($region);
 }
        $query = $region ? $region->children() : Region::roots();
@@ -97,7 +97,7 @@ class AdvertController extends Controller
 
        $adverts=$query->paginate(20);
 
-           return view('adverts.admin.index',compact('category','region','adverts'));
+           return view('adverts.index',compact('category','region','adverts'));
    }
    public function show(Advert $advert){
 

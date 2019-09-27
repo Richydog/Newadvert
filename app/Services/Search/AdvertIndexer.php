@@ -39,7 +39,7 @@ class AdvertIndexer
 
         $this->client->index([
             'index' => 'adverts',
-            'type' => 'advert',
+          //  'type' => 'advert',
             'id' => $advert->id,
             'body' => [
                 'id' => $advert->id,

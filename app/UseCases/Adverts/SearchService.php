@@ -2,9 +2,9 @@
 
 namespace App\UseCases\Adverts;
 
-use App\Entity\Adverts\Advert\Advert;
-use App\Entity\Adverts\Category;
-use App\Entity\Region;
+use App\Advert;
+use App\Model\Adverts\Category;
+use App\Model\Region;
 use App\Http\Requests\Adverts\SearchRequest;
 use Elasticsearch\Client;
 use Illuminate\Database\Query\Expression;
