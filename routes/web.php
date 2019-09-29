@@ -16,6 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes(['verify'=>true]);
 
 Route::get('profile', function () {
@@ -24,6 +25,8 @@ Route::get('profile', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/adverts','Cabinet\AdvertsController');
+
+Route::get('/{adverts_path?}', 'Adverts\AdvertController@index')->name('index')->where(!'create', 'adverts_path', '.+');
 
 Route::group(['prefix' => 'profily', 'as' => 'profily','middleware'=>['auth']], function () {
     Route::get('/', 'Cabinet\ProfileController@index')->name('home');
@@ -42,13 +45,14 @@ Route::group([
 ], function () {
     Route::get('/show/{advert}', 'AdvertController@show')->name('show');
     Route::post('/show/{advert}/phone', 'AdvertController@phone')->name('phone');
-    Route::get('/all/{category?}', 'AdvertController@index')->name('index.all');
-    Route::get('/{region?}/{category}', 'AdvertController@index')->name('index');
+  //  Route::get('/all/{category?}', 'AdvertController@index')->name('index.all');
+   // Route::get('/{region?}/{category}', 'AdvertController@index')->name('index');
     Route::post('/show/{advert}/favorites', 'FavoriteController@add')->name('favorites');
     Route::delete('/show/{advert}/favorites', 'FavoriteController@remove');
 
-//Route::get('/{adverts_path?}', 'AdvertController@index')->name('index')->where('adverts_path', '.+');
+
 });
+
 
 
 Route::middleware('auth','can:admin-panel')->group(
@@ -71,7 +75,7 @@ Route::middleware('auth','can:admin-panel')->group(
 });
 //Route::get('/adverts', 'Adverts\AdvertController@index')->name('index');
 Route::get('/cabadvert', 'Cabinet\AdvertsController@index')->name('index1');
-
+//Route::get('/adverts', 'Cabinet\AdvertsController@create');
 Route::group([
     'prefix' => 'adverts',
     'as' => 'adverts.',
@@ -95,7 +99,7 @@ Route::group([
     Route::delete('/{advert}/destroy', 'ManageController@destroy')->name('man.destroy');
 });
 
-Route::group(['prefix' => 'adverts', 'as' => 'adverts.', 'namespace' => 'Admin\Adverts'], function () {
+Route::group(['prefix' => 'admin/adverts', 'as' => 'admin/adverts.', 'namespace' => 'Admin\Adverts'], function () {
     Route::get('/', 'AdvertController@index')->name('admin.index');
     Route::get('/{advert}/edit', 'AdvertController@editForm')->name('admin.edit');
     Route::put('/{advert}/edit', 'AdvertController@edit');
@@ -108,7 +112,7 @@ Route::group(['prefix' => 'adverts', 'as' => 'adverts.', 'namespace' => 'Admin\A
     Route::post('/{advert}/reject', 'AdvertController@reject');
     Route::delete('/{advert}/destroy', 'AdvertController@destroy')->name('admin.destroy');
 });
-
+//Route::get('/cabadverts', 'Admin\Adverts\AdvertController@index')->name('admin.index');
 Route::group(
     [
         'prefix' => 'cabinet',

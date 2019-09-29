@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
 use App\Model\Region;
 use  App\Model\Adverts\Category;
+use App\Http\Router\AdvertsPath;
+use Illuminate\Support\Facades\Gate;
 class
 HomeController extends Controller
 {
@@ -41,4 +43,10 @@ HomeController extends Controller
         return view('home', compact('regions', 'categories','adverts'));
 
     }
+
+
 }
+
+
+
+

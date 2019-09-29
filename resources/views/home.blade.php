@@ -13,8 +13,8 @@
                 @foreach (array_chunk($categories, 3) as $chunk)
                     <div class="col-md-3">
                         <ul class="list-unstyled">
-                            @foreach ($chunk as $current)
-                                <li><a href="{{ route('index1', adverts_path(null, $current)) }}">{{ $current->name }}</a></li>
+                            @foreach ($chunk as $carrent)
+                                <li><a href="{{ route('index', adverts_path(null, $carrent)) }}">{{ $carrent->name }}</a></li>
                             @endforeach
                         </ul>
                     </div>
@@ -32,8 +32,8 @@
                 @foreach (array_chunk($regions, 3) as $chunk)
                     <div class="col-md-3">
                         <ul class="list-unstyled">
-                            @foreach ($chunk as $current)
-                                <li><a href="{{ route('index1', adverts_path($current, null)) }}">{{ $current->name }}</a></li>
+                            @foreach ($chunk as $carrent)
+                                <li><a href="{{ route('index', adverts_path($carrent, null)) }}">{{ $carrent->name }}</a></li>
                             @endforeach
                         </ul>
                     </div>

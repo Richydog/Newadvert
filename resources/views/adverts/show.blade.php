@@ -15,21 +15,21 @@
 
     @can ('manage-adverts')
         <div class="d-flex flex-row mb-3">
-            <a href="{{ route('adverts.admin.edit', $advert) }}" class="btn btn-primary mr-1">Edit</a>
-            <a href="{{ route('adverts.admin.photos', $advert) }}" class="btn btn-primary mr-1">Photos</a>
+            <a href="{{ route('admin/adverts.admin.edit', $advert) }}" class="btn btn-primary mr-1">Edit</a>
+            <a href="{{ route('admin/adverts.admin.photos', $advert) }}" class="btn btn-primary mr-1">Photos</a>
 
             @if ($advert->isOnModeration())
-                <form method="POST" action="{{ route('adverts.admin.moderate', $advert) }}" class="mr-1">
+                <form method="POST" action="{{ route('admin/adverts.admin.moderate', $advert) }}" class="mr-1">
                     @csrf
                     <button class="btn btn-success">Moderate</button>
                 </form>
             @endif
 
             @if ($advert->isOnModeration() || $advert->isActive())
-                <a href="{{ route('adverts.admin.reject', $advert) }}" class="btn btn-danger mr-1">Reject</a>
+                <a href="{{ route('admin/adverts.admin.reject', $advert) }}" class="btn btn-danger mr-1">Reject</a>
             @endif
 
-            <form method="POST" action="{{ route('adverts.admin.destroy', $advert) }}" class="mr-1">
+            <form method="POST" action="{{ route('admin/adverts.admin.destroy', $advert) }}" class="mr-1">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger">Delete</button>
@@ -39,8 +39,8 @@
 
     @can ('manage-own-advert', $advert)
             <div class="d-flex flex-row mb-3">
-                <a href="{{ route('adverts.admin.edit', $advert) }}" class="btn btn-primary mr-1">Edit</a>
-                <a href="{{ route('adverts.admin.photos', $advert) }}" class="btn btn-primary mr-1">Photos</a>
+                <a href="{{ route('admin/adverts.admin.edit', $advert) }}" class="btn btn-primary mr-1">Edit</a>
+                <a href="{{ route('admin/adverts.admin.photos', $advert) }}" class="btn btn-primary mr-1">Photos</a>
 
                 @if ($advert->isDraft())
                     <form method="POST" action="{{ route('adverts.man.send', $advert) }}" class="mr-1">
@@ -55,7 +55,7 @@
                     </form>
                 @endif
 
-                <form method="POST" action="{{ route('adverts.admin.destroy', $advert) }}" class="mr-1">
+                <form method="POST" action="{{ route('admin/adverts.admin.destroy', $advert) }}" class="mr-1">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger">Delete</button>

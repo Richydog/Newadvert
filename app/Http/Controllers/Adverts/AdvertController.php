@@ -78,42 +78,42 @@ class AdvertController extends Controller
         return $advert->user->phone;
     }*/
 
-   public function index(AdvertsPath $path){
-       $query=Advert::active()->with(['category','region'])->orderByDesc('id');
+    public function index(AdvertsPath $path){
+          $query=Advert::active()->with(['category','region'])->orderByDesc('id');
 
 
-       if ($category=$path->category){
-           $query->forCategory($category);
-       }
-        if ($region=$path->region){
-          $query->forRegion($region);
-}
-       $query = $region ? $region->children() : Region::roots();
-       $regions = $query->orderBy('name')->getModels();
-
-       $query = $category ? $category->children() : Category::whereIsRoot();
-       $categories = $query->defaultOrder()->getModels();
-
-
-       $adverts=$query->paginate(20);
-
-           return view('adverts.index',compact('category','region','adverts'));
+          if ($category=$path->category){
+              $query->forCategory($category);
+          }
+           if ($region=$path->region){
+             $query->forRegion($region);
    }
-   public function show(Advert $advert){
+          $query = $region ? $region->children() : Region::roots();
+          $regions = $query->orderBy('name')->getModels();
 
-       if (!($advert->isActive() || Gate::allows('show-advert', $advert))) {
-           abort(403);
+          $query = $category ? $category->children() : Category::whereIsRoot();
+          $categories = $query->defaultOrder()->getModels();
+
+        $adverts=Advert::active()->orderByDesc('id');
+          $adverts=$query->paginate(20);
+
+              return view('adverts.index',compact('category','region','adverts','categories','regions'));
+      }
+      public function show(Advert $advert){
+
+          if (!($advert->isActive() || Gate::allows('show-advert', $advert))) {
+              abort(403);
+          }
+
+          return view('adverts.show',compact('advert'));
+      }
+
+       public function phone(Advert $advert): string
+       {
+           if (!($advert->isActive() || Gate::allows('show-advert', $advert))) {
+               abort(403);
+           }
+
+           return $advert->user->phone;
        }
-
-       return view('adverts.show',compact('advert'));
-   }
-
-    public function phone(Advert $advert): string
-    {
-        if (!($advert->isActive() || Gate::allows('show-advert', $advert))) {
-            abort(403);
-        }
-
-        return $advert->user->phone;
-    }
 }

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <form action="{{ $route }}" method="GET">
+                <form action="{{$route}}" method="GET">
                     <div class="row">
                         <div class="col-md-11">
                             <div class="form-group">

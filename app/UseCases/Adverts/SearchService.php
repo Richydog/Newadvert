@@ -19,6 +19,14 @@ class SearchService
         $this->client = $client;
     }
 
+    /**
+     * @param Category|null $category
+     * @param Region|null $region
+     * @param SearchRequest $request
+     * @param int $perPage
+     * @param int $page
+     * @return SearchResult
+     */
     public function search(?Category $category, ?Region $region, SearchRequest $request, int $perPage, int $page): SearchResult
     {
         $values = array_filter((array)$request->input('attrs'), function ($value) {
@@ -27,7 +35,7 @@ class SearchService
 
         $response = $this->client->search([
             'index' => 'adverts',
-            'type' => 'advert',
+         //   'type' => 'advert',
             'body' => [
                 '_source' => ['id'],
                 'from' => ($page - 1) * $perPage,

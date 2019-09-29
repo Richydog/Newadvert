@@ -9,7 +9,7 @@
         <li class="nav-item"><a class="nav-link " href="{{route('users.index')}}">User</a>
         </li>
         </li>
-        <li class="nav-item"><a class="nav-link " href="{{route('adverts.admin.index')}}">Advert</a>
+        <li class="nav-item"><a class="nav-link " href="{{route('admin/adverts.admin.index')}}">Advert</a>
         </li>
         <li class="nav-item"><a class="nav-link   " href="{{route('regions.index')}}">Region</a>
         </li>
