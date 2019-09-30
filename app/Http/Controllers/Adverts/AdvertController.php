@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 
 class AdvertController extends Controller
-{/*
+{
     private $search;
 
     public function __construct(SearchService $search)
@@ -76,9 +76,9 @@ class AdvertController extends Controller
         }
 
         return $advert->user->phone;
-    }*/
+    }
 
-    public function index(AdvertsPath $path){
+  /*  public function index(AdvertsPath $path){
           $query=Advert::active()->with(['category','region'])->orderByDesc('id');
 
 
@@ -115,5 +115,5 @@ class AdvertController extends Controller
            }
 
            return $advert->user->phone;
-       }
+       }*/
 }

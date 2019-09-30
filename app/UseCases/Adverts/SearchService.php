@@ -35,10 +35,11 @@ class SearchService
 
         $response = $this->client->search([
             'index' => 'adverts',
-         //   'type' => 'advert',
+          'type' => '_doc',
             'body' => [
                 '_source' => ['id'],
                 'from' => ($page - 1) * $perPage,
+              //  'from' =>  $perPage,
                 'size' => $perPage,
                 'sort' => empty($request['text']) ? [
                     ['published_at' => ['order' => 'desc']],
@@ -94,15 +95,15 @@ class SearchService
 
         $ids = array_column($response['hits']['hits'], '_id');
 
-        if ($ids) {
+       if ($ids) {
             $items = Advert::active()
                 ->with(['category', 'region'])
                 ->whereIn('id', $ids)
                 ->orderBy(new Expression('FIELD(id,' . implode(',', $ids) . ')'))
                 ->get();
-            $pagination = new LengthAwarePaginator($items, $response['hits']['total'], $perPage, $page);
+            $pagination = new LengthAwarePaginator($items, $response['hits']['total'], $perPage,$page);
         } else {
-            $pagination = new LengthAwarePaginator([], 0, $perPage, $page);
+            $pagination = new LengthAwarePaginator([], 0, $perPage,$page);
         }
 
         return new SearchResult(

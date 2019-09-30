@@ -21,8 +21,8 @@
                             <ul class="list-unstyled">
                                 @foreach ($chunk as $carrent)
                                     <li>
-                                        <a href="{{ route('adverts.index', array_merge(['adverts_path' => adverts_path($region, $carrent)], request()->all())) }}">{{ $carrent->name }}</a>
-                                        ({{ $categoriesCounts[$carrent->id] ?? 0 }})
+                                        <a href="{{ route('index', array_merge(['adverts_path' => adverts_path($region, $carrent)], request()->all())) }}">{{ $carrent->name }}</a>
+                                        ({{ $categoriesCounts[$carrent->id] ?? 0}})
                                     </li>
                                 @endforeach
                             </ul>
@@ -49,7 +49,7 @@
                             <ul class="list-unstyled">
                                 @foreach ($chunk as $carrent)
                                     <li>
-                                        <a href="{{ route('adverts.index', array_merge(['adverts_path' => adverts_path($carrent, $category)], request()->all())) }}">{{ $carrent->name }}</a>
+                                        <a href="{{ route('index', array_merge(['adverts_path' => adverts_path($carrent, $category)], request()->all())) }}">{{ $carrent->name }}</a>
                                         ({{ $regionsCounts[$carrent->id] ?? 0 }})
                                     </li>
                                 @endforeach
@@ -75,7 +75,7 @@
                                 <span class="float-right">{{ $advert->price }}</span>
                                 <div class="h4" style="margin-top: 0"><a href="{{ route('adverts.show', $advert) }}">{{ $advert->title }}</a></div>
                                 <p>Region: <a href="">{{ $advert->region ? $advert->region->name : 'All' }}</a></p>
-                                <p>Category: <a href="">{{ $advert->category }}</a></p>
+                                <p>Category: <a href="">{{ $advert->category->name }}</a></p>
                                 <p>Date: {{ $advert->created_at }}</p>
                             </div>
                         </div>
