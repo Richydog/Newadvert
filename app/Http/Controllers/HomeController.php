@@ -26,7 +26,7 @@ HomeController extends Controller
          *
          */
 
-        //$this->middleware(['auth'=>'verified']);
+       // $this->middleware(['auth'=>'verified']);
     }
 
     /**
