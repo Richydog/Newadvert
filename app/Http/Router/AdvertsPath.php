@@ -37,7 +37,7 @@ class AdvertsPath implements UrlRoutable
         $segments = [];
 
         if ($this->region) {
-        //    $segments[] = Cache::tags(Region::class)->rememberForever('region_path_' . $this->region->id, function () {
+        //   $segments[] = Cache::tags(Region::class)->rememberForever('region_path_' . $this->region->id, function () {
                 return $this->region->getPath();
 
         }

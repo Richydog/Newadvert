@@ -38,7 +38,7 @@ class SearchService
           'type' => '_doc',
             'body' => [
                 '_source' => ['id'],
-                'from' => ($page - 1) * $perPage,
+               'from' => ($page-1 ) * $perPage,
               //  'from' =>  $perPage,
                 'size' => $perPage,
                 'sort' => empty($request['text']) ? [
@@ -92,6 +92,7 @@ class SearchService
                 ],
             ],
         ]);
+
 
         $ids = array_column($response['hits']['hits'], '_id');
 

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Advert;
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
@@ -39,7 +39,7 @@ HomeController extends Controller
         $regions = Region::roots()->orderBy('name')->getModels();
 
         $categories = Category::whereIsRoot()->defaultOrder()->getModels();
-    $adverts=Advert::all();
+    $adverts=Advert::get()->where(Auth::user());
         return view('home', compact('regions', 'categories','adverts'));
 
     }
