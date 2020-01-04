@@ -9,7 +9,7 @@ use App\Http\Requests\Adverts\SearchRequest;
 use Elasticsearch\Client;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Pagination\LengthAwarePaginator;
-
+use Illuminate\Support\Facades\Response;
 class SearchService
 {
     private $client;
@@ -38,8 +38,7 @@ class SearchService
           'type' => '_doc',
             'body' => [
                 '_source' => ['id'],
-               'from' => ($page-1 ) * $perPage,
-              //  'from' =>  $perPage,
+               'from' =>($page-1)*$perPage,
                 'size' => $perPage,
                 'sort' => empty($request['text']) ? [
                     ['published_at' => ['order' => 'desc']],
@@ -102,7 +101,7 @@ class SearchService
                 ->whereIn('id', $ids)
                 ->orderBy(new Expression('FIELD(id,' . implode(',', $ids) . ')'))
                 ->get();
-            $pagination = new LengthAwarePaginator($items, $response['hits']['total'], $perPage,$page);
+            $pagination = new LengthAwarePaginator($items,current($response['hits']['total']), $perPage,$page);
         } else {
             $pagination = new LengthAwarePaginator([], 0, $perPage,$page);
         }

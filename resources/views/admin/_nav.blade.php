@@ -3,9 +3,11 @@
    @can ('manage-adverts')
         <li class="nav-item"><a class="nav-link{{ $page === 'adverts' ? ' active' : '' }}" href="{{ route('admin/adverts.admin.index') }}">Adverts</a></li>
     @endcan
-    <!--@can ('manage-banners')
+
+    @can ('manage-banners')
         <li class="nav-item"><a class="nav-link{{ $page === 'banners' ? ' active' : '' }}" href="{{ route('admin.banners.index') }}">Banners</a></li>
-    @endcan -->
+    @endcan
+
     @can ('manage-regions')
         <li class="nav-item"><a class="nav-link{{ $page === 'regions' ? ' active' : '' }}" href="{{ route('regions.index') }}">Regions</a></li>
     @endcan

@@ -18,3 +18,9 @@ mix.js('resources/js/app.js', 'public/js')
 
  mix.setPublicPath('public');
  mix.setResourceRoot('../');
+
+ mix.webpackConfig({
+    plugins: [
+        new webpack.IgnorePlugin(/^codemirror$/)
+    ]
+});

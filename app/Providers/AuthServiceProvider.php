@@ -47,10 +47,10 @@ class AuthServiceProvider extends ServiceProvider
         });
         Gate::define('manage-adverts', function (User $user) {
             return $user->isAdmin() ;
-        });
+        });*/
         Gate::define('manage-banners', function (User $user) {
             return $user->isAdmin();
-        });*/
+        });
         Gate::define('manage-own-advert', function (User $user,Advert $advert) {
             return $advert->user_id==$user->id;
         });
