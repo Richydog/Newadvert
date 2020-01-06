@@ -58,7 +58,8 @@ class BannerController extends Controller
 
     public function editForm(Banner $banner)
     {
-        return view('admin.banners.edit', compact('banner'));
+        $formats = Banner::formatsList();
+        return view('admin.banners.edit', compact('banner','formats'));
     }
 
     public function edit(EditRequest $request, Banner $banner)

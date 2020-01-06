@@ -116,6 +116,7 @@ class BannerService
             'name' => $request['name'],
             'limit' => $request['limit'],
             'url' => $request['url'],
+            'format' => $request['format'],
         ]);
     }
 
@@ -126,6 +127,7 @@ class BannerService
             'name' => $request['name'],
             'limit' => $request['limit'],
             'url' => $request['url'],
+            'format' => $request['format'],
         ]);
     }
 

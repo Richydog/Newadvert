@@ -5,7 +5,7 @@ use App\Advert;
 use App\User;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-
+use App\Model\Banner\Banner;
 class AuthServiceProvider extends ServiceProvider
 {
     /**
@@ -59,6 +59,9 @@ class AuthServiceProvider extends ServiceProvider
         });
         Gate::define('manage-adverts', function (User $user) {
             return $user->isAdmin() || $user->isModerator();
+        });
+        Gate::define('manage-own-banner', function (User $user, Banner $banner) {
+            return $banner->user_id === $user->id ||$user->isAdmin()  ;
         });
     }
 
