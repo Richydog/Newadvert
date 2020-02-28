@@ -65,8 +65,10 @@ class AdvertController extends Controller
         }
 
         $user = Auth::user();
-
-        return view('adverts.show', compact('advert', 'user'));
+        $id=$advert->id;
+        $pats=$advert->photos;
+//return dd($pats);
+       return view('adverts.show', compact('advert', 'user','pats'));
     }
 
     public function phone(Advert $advert): string

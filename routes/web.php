@@ -25,6 +25,9 @@ Route::get('profile', function () {
 })->middleware('verified');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/login/{network}', 'Auth\NetworkController@redirect')->name('login.network');
+Route::get('/login/{network}/callback', 'Auth\NetworkController@callback');
+
 Route::get('/banner/get', 'BannerController@get')->name('banner.get');
 Route::get('/banner/{banner}/click', 'BannerController@click')->name('banner.click');
 
@@ -185,6 +188,6 @@ Route::group(
     }
 );
 
-Route::get('/{adverts_path?}', 'Adverts\AdvertController@index')->name('index')->where(!'create', 'adverts_path', '.+');
-
+Route::get('/{adverts_path?}', 'Adverts\AdvertController@index')->name('index')->where( 'adverts_path', '.+');
+// Route::get('/{adverts_path?}', 'Adverts\AdvertController@index')->name('index')->where(!'create', 'adverts_path', '.+');
 Route::get('/', 'StartController@index')->name('start');

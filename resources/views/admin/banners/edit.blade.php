@@ -26,7 +26,7 @@
             <label for="format" class="col-form-label">Format</label>
             <select id="format" class="form-control{{ $errors->has('format') ? ' is-invalid' : '' }}" name="format">
                 @foreach ($formats as $value)
-                    <option value="{{ $value }}{{ $value === old('format') ? ' selected' : '' }}">{{ $value }}</option>
+                    <option value="{{ $value }}{{ $value === old('format',$banner->format) ? ' selected' : '' }}">{{ $value }}</option>
                 @endforeach;
             </select>
             @if ($errors->has('format'))

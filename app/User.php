@@ -9,7 +9,7 @@ use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use App\Model\Network;
 /**
  * @property int $id
  * @property string $name
@@ -23,8 +23,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property Carbon $phone_verify_token_expire
  * @property boolean $phone_auth
  * @property string $role
-
- *
  * @property Network[] networks
  *
  * @method Builder byNetwork(string $network, string $identity)
@@ -65,7 +63,7 @@ class User extends Authenticatable  implements MustVerifyEmail
         'phone_verify_token_expire' => 'datetime',
         'phone_auth' => 'boolean',
       //  'token'=>'string'
-    
+
     ];
 
     public static function rolesList(): array

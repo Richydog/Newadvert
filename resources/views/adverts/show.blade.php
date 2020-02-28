@@ -3,7 +3,7 @@
 @section('content')
 
     @if ($advert->isDraft())
-        <div class="alert alert-danger">
+        <div class="alert alert-danger" xmlns:border="http://www.w3.org/1999/xhtml">
             It is a draft.
         </div>
         @if ($advert->reject_reason)
@@ -80,13 +80,19 @@
             <div style="margin-bottom: 20px">
                 <div class="row">
                     <div class="col-10">
-                        <div style="height: 400px; background: #f6f6f6; border: 1px solid #ddd"></div>
+                    <div style="height: 400px; background: #f6f6f6; border: 1px solid #ddd">
+
+                        @foreach ($pats as $pat)
+
+                              <img  src="{{ asset('/storage/'.$pat->file) }}" height="100px"width="200" alt="">
+
+                        @endforeach
+
                     </div>
-                    <div class="col-2">
-                        <div style="height: 100px; background: #f6f6f6; border: 1px solid #ddd"></div>
-                        <div style="height: 100px; background: #f6f6f6; border: 1px solid #ddd"></div>
-                        <div style="height: 100px; background: #f6f6f6; border: 1px solid #ddd"></div>
-                        <div style="height: 100px; background: #f6f6f6; border: 1px solid #ddd"></div>
+                </div>
+                    <div class="col-2 " >
+
+
                     </div>
                 </div>
             </div>

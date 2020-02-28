@@ -70,4 +70,30 @@
         </div>
     </div>
 </div>
+<div class="row">
+<div class="col">
+</div>
+ <div class="col col">
+            <div class="card">
+                <div class="card-header">Auth by Networks</div>
+                <div class="card-body">
+                    
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="{{ route('login.network', ['network' => 'facebook']) }}"><span class="fa fa-facebook-square"></span> Facebook</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('login.network', ['network' => 'twitter']) }}"><span class="fa fa-twitter-square"></span> Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+                  
+            </div>
+
+        </div>
+         <div class="col">
+                </div>
+        </div>
+       
+    
 @endsection

@@ -8,9 +8,9 @@ class CostCalculator
 {
     private $price;
 
-    public function pris( int $cent)
+    public function __construct( int $price)
     {
-        $this->price = $cent;
+        $this->price = $price;
     }
 
     public function calc(int $views): int

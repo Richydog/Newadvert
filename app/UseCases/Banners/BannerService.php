@@ -28,34 +28,56 @@ class BannerService
 
     public function getRandomForView(?int $categoryId, ?int $regionId, $format): ?Banner
     {
+
+
         $response = $this->client->search([
             'index' => 'banners',
-            'type' => 'banner',
+      //      'type' => 'doc',
             'body' => [
                 '_source' => ['id'],
                 'size' => 5,
-                'sort' => [
+              'sort' => [
                     '_script' => [
                         'type' => 'number',
                         'script' => 'Math.random() * 200000',
                         'order' => 'asc',
                     ],
-                ],
+              ],
                 'query' => [
-                    'bool' => [
-                        'must' => [
-                            ['term' => ['status' => Banner::STATUS_ACTIVE]],
-                            ['term' => ['format' => $format ?: '']],
-                            ['term' => ['categories' => [$categoryId, 0] ?: 0]],
-                            ['term' => ['regions' => $regionId ?: 0]],
+                'bool' => [
+                        'should' => [
+                           ['term' => ["status" => "active"]],
+                           ['term' => ["format" => $format ?: '']],
+                            ['term' => ["categories" => $categoryId ? : 0]],
+
+                            ['term' => ['regions' => $regionId ? : 0]],
+                       ],
+
+
                         ],
+
+         /*   'bool' => [
+                        'must' => [
+                                 ['term' => ["status" => "active"]],
+                                ['term' => ["format" => $format ?: '']],
+                            ['term' => ["categories" => $categoryId ?: 0]],
+
+                            ['term' => ['regions' => $regionId ? : 0]],
+                        ],
+
+
+                    ],*/
                     ],
-                ],
-            ],
+                    ],
+
+         //   ],
+
         ]);
 
-        if (!$ids = array_column($response['hits']['hits'], '_id')) {
-            return null;
+        if (!$ids = array_column($response['hits']['hits'], '_id'))
+        {
+            return  null;
+
         }
 
         $banner = Banner::active()
@@ -69,7 +91,8 @@ class BannerService
         }
 
         $banner->view();
-        return $banner;
+     return $banner;
+      //  return dd($response);
     }
 
     public function create(User $user, Category $category, ?Region $region, CreateRequest $request): Banner

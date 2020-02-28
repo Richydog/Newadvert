@@ -2,8 +2,10 @@
 
 namespace App\Services\Search;
 
-use App\Entity\Banner\Banner;
-use App\Entity\Region;
+use App\Model\Banner\Banner;
+use App\Http\Controllers\BannerController;
+use App\Model\Region;
+use App\Model\Adverts\Category;
 use Elasticsearch\Client;
 
 class BannerIndexer
@@ -19,7 +21,7 @@ class BannerIndexer
     {
         $this->client->deleteByQuery([
             'index' => 'banners',
-            'type' => 'banner',
+        //    'type' => 'banner',
             'body' => [
                 'query' => [
                     'match_all' => new \stdClass(),
@@ -30,18 +32,18 @@ class BannerIndexer
 
     public function index(Banner $banner): void
     {
-        $regionIds = [0];
+        $regionIds = [];
         if ($banner->region) {
             $regionIds = [$banner->region->id];
-            $childrenIds = $regionIds;
+           $childrenIds = $regionIds;
             while ($childrenIds = Region::whereIn('parent_id', $childrenIds)->pluck('id')->toArray()) {
-                $regionIds = array_merge($regionIds, $childrenIds);
-            }
-        }
+              $regionIds = array_merge($regionIds, $childrenIds);
+           }
+       }
 
         $this->client->index([
             'index' => 'banners',
-            'type' => 'banner',
+        //    'type' => 'banner',
             'id' => $banner->id,
             'body' => [
                 'id' => $banner->id,
@@ -60,7 +62,7 @@ class BannerIndexer
     {
         $this->client->delete([
             'index' => 'banners',
-            'type' => 'banner',
+        //    'type' => 'banner',
             'id' => $banner->id,
         ]);
     }
