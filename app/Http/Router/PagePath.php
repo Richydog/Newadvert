@@ -2,7 +2,7 @@
 
 namespace App\Http\Router;
 
-use App\Entity\Page;
+use App\Model\Page;
 use Illuminate\Contracts\Routing\UrlRoutable;
 use Illuminate\Support\Facades\Cache;
 
@@ -26,9 +26,9 @@ class PagePath implements UrlRoutable
             throw new \BadMethodCallException('Empty page.');
         }
 
-        return Cache::tags(Page::class)->rememberForever('page_path_' . $this->page->id, function () {
+      //  return Cache::tags(Page::class)->rememberForever('page_path_' . $this->page->id, function () {
             return $this->page->getPath();
-        });
+    //   });
     }
 
     public function getRouteKeyName(): string

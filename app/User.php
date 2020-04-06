@@ -244,6 +244,7 @@ class User extends Authenticatable  implements MustVerifyEmail
 
     public function findForPassport($identifier)
     {
-        return self::where('email', $identifier)->where('status', self::STATUS_ACTIVE)->first();
+      //  return self::where('email', $identifier)->where('status', self::STATUS_ACTIVE)->first();
+        return self::where('email', $identifier)->first();
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api\Adverts;
 
-use App\Entity\Adverts\Advert\Advert;
+use App\Advert;
 use App\Http\Controllers\Controller;
 use App\UseCases\Adverts\FavoriteService;
 use Illuminate\Http\Response;

@@ -84,7 +84,7 @@
 
                         @foreach ($pats as $pat)
 
-                              <img  src="{{ asset('/storage/'.$pat->file) }}" height="100px"width="200" alt="">
+                            <span>   <img  src="{{ asset('/storage/'.$pat->file) }}" height="300px"width="300" alt=""></span>
 
                         @endforeach
 
@@ -92,7 +92,11 @@
                 </div>
                     <div class="col-2 " >
 
+                        @foreach ($pats as $pat)
 
+                            <p>    <img  src="{{ asset('/storage/'.$pat->file) }}" height="100px"width="200" alt=""></p>
+
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -178,13 +182,15 @@
 @endsection
 
 @section('scripts')
-    <script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=46c83030-0090-431c-893a-56d9b574c22c&lang=ru_RU" type="text/javascript">
+    </script>
 
     <script type='text/javascript'>
         ymaps.ready(init);
         function init(){
             var geocoder = new ymaps.geocode(
-                '{{ $advert->address }}',
+                '{{ $advert->address}}',
                 { results: 1 }
             );
             geocoder.then(
@@ -206,5 +212,6 @@
                 }
             );
         }
+
     </script>
 @endsection

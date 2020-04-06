@@ -22,7 +22,7 @@
             @endif
         </div>
         <div class="form-group">
-            <label for="parent" class="col-form-label">Parent</label>
+            <label for="parent" class="col-form-label">Parent_ID</label>
             <input id="parent" class="form-control{{ $errors->has('parent') ? ' is-invalid' : '' }}" name="parent" value="{{ old('parent') }}" >
             @if ($errors->has('parent'))
                 <span class="invalid-feedback"><strong>{{ $errors->first('parent') }}</strong></span>

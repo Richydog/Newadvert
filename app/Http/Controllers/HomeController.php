@@ -39,7 +39,7 @@ HomeController extends Controller
         $regions = Region::roots()->orderBy('name')->getModels();
 
         $categories = Category::whereIsRoot()->defaultOrder()->getModels();
-    $adverts=Advert::get()->where(Auth::user());
+    $adverts=Advert::all();
         return view('home', compact('regions', 'categories','adverts'));
 
     }

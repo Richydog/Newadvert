@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('breadcrumbs', '')
 @section('content')
     <p><a href="{{route('adverts.create')}}" class="btn btn-success">Add Advert</a></p>
 
@@ -10,11 +10,11 @@
         </div>
         <div class="card-body pb-0" style="color: #aaa">
             <div class="row">
-                @foreach (array_chunk($categories, 3) as $chunk)
+                @foreach (array_chunk($categories,3) as $chunk)
                     <div class="col-md-3">
                         <ul class="list-unstyled">
                             @foreach ($chunk as $carrent)
-                                <li><a href="{{ route('index', adverts_path(null, $carrent)) }}">{{ $carrent->name }}</a></li>
+                                <li><a href="{{ route('urad.index', adverts_path(null, $carrent)) }}">{{ $carrent->name }}</a></li>
                             @endforeach
                         </ul>
                     </div>
@@ -29,11 +29,11 @@
         </div>
         <div class="card-body pb-0" style="color: #aaa">
             <div class="row">
-                @foreach (array_chunk($regions, 3) as $chunk)
+                @foreach (array_chunk($regions,3) as $chunk)
                     <div class="col-md-3">
                         <ul class="list-unstyled">
                             @foreach ($chunk as $carrent)
-                                <li><a href="{{ route('index', adverts_path($carrent, null)) }}">{{ $carrent->name }}</a></li>
+                                <li><a href="{{ route('urad.index', adverts_path($carrent, null)) }}">{{ $carrent->name }}</a></li>
                             @endforeach
                         </ul>
                     </div>

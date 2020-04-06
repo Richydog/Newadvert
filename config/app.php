@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         App\Providers\SearchServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
     ],
 
     /*

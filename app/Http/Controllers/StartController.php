@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Advert;
+use App\Model\Adverts\Category;
+use App\Model\Region;
 use Illuminate\Http\Request;
 
 class StartController extends Controller
@@ -13,7 +16,13 @@ class StartController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $regions = Region::roots()->orderBy('name')->getModels();
+
+        $categories = Category::whereIsRoot()->defaultOrder()->getModels();
+        $adverts=Advert::all();
+        return view('home', compact('regions', 'categories','adverts'));
+
+       // return view('home');
     }
 
     /**

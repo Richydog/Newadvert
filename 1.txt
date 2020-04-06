@@ -1,0 +1,14 @@
+"grant_type": "password",
+"client_id": 2,
+"client_secret": "rik4uy9huVH24GN3fUts6YlsNAhtwFpzhkavqTn1",
+"username": "zadarya@mail.ru",
+"password": "123456",
+"scope": ""
+
+
+{'grant_type' => 'password',
+        'client_id' => '2',
+        'client_secret' => 'rik4uy9huVH24GN3fUts6YlsNAhtwFpzhkavqTn1',
+        'username' => 'zadarya@mail.ru',
+        'password' => '123456',
+        'scope' => '',}

@@ -21,7 +21,7 @@
                             <ul class="list-unstyled">
                                 @foreach ($chunk as $carrent)
                                     <li>
-                                        <a href="{{ route('index', array_merge(['adverts_path' => adverts_path($region, $carrent)], request()->all())) }}">{{ $carrent->name }}</a>
+                                        <a href="{{ route('urad.index', array_merge(['adverts_path' => adverts_path($region, $carrent)], request()->all())) }}">{{ $carrent->name }}</a>
                                         ({{ $categoriesCounts[$carrent->id] ?? 0}})
                                     </li>
                                 @endforeach
@@ -49,7 +49,7 @@
                             <ul class="list-unstyled">
                                 @foreach ($chunk as $carrent)
                                     <li>
-                                        <a href="{{ route('index', array_merge(['adverts_path' => adverts_path($carrent, $category)], request()->all())) }}">{{ $carrent->name }}</a>
+                                        <a href="{{ route('urad.index', array_merge(['adverts_path' => adverts_path($carrent, $category)], request()->all())) }}">{{ $carrent->name }}</a>
                                         ({{ $regionsCounts[$carrent->id] ?? 0 }})
                                     </li>
                                 @endforeach

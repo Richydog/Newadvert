@@ -3,9 +3,12 @@
 namespace App\Providers;
 use App\Advert;
 use App\User;
+
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use App\Model\Banner\Banner;
+use Laravel\Passport\Passport;
+
 class AuthServiceProvider extends ServiceProvider
 {
     /**
@@ -26,6 +29,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+        Passport::routes();
+
         Gate::define('admin-panel',function (User $user){
            return $user->isAdmin();
         });
@@ -38,16 +43,16 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('manage-regions', function (User $user) {
             return $user->isAdmin();
         });
-        /*
+
         Gate::define('manage-pages', function (User $user) {
             return $user->isAdmin();
         });
-        Gate::define('manage-tickets', function (User $user) {
-            return $user->isAdmin() ;
-        });
-        Gate::define('manage-adverts', function (User $user) {
+    /*    Gate::define('manage-tickets', function (User $user) {
             return $user->isAdmin() ;
         });*/
+        Gate::define('manage-adverts', function (User $user) {
+            return $user->isAdmin() ;
+        });
         Gate::define('manage-banners', function (User $user) {
             return $user->isAdmin();
         });

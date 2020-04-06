@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    @yield('meta')
     <title>{{ config('app.name', 'Advert') }}</title>
 
     <!-- Scripts -->
@@ -23,11 +23,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 
+
 </head>
 
 <body>
-<div class="container-fluid">
-    <div id="app">
+
+    <div id="app"><div class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
             <div class="container">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
@@ -38,8 +39,25 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav  mr-auto bg-primary">
+                        @foreach (array_slice($menuPages, 0, 3) as $page)
+                            <li><a class="nav-link text-white   " href="{{ route('page', page_path($page)) }}">{{ $page->getMenuTitle() }}</a></li>
+                        @endforeach
+                        @if ($morePages = array_slice($menuPages, 3))
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    More... <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    @foreach ($morePages as $page)
+                                        <a class="dropdown-item" href="{{ route('page', page_path($page)) }}">{{ $page->getMenuTitle() }}</a>
+                                    @endforeach
+                                </div>
+                            </li>
+                        @endif
+                    </ul>
 
                     </ul>
 
@@ -67,11 +85,11 @@
                                     <a class="dropdown-item" href="{{ route('admin.home') }}">Admin</a>
                                     <a class="dropdown-item" href="{{ route('users.index') }}">User</a>
                                     <a class="dropdown-item" href="{{ route('users.create') }}">Create User</a>
-                                        <a class="dropdown-item" href="{{ route('home') }}">Home</a>
+
 
                                     @endcan
                                         <a class="dropdown-item" href="{{ route('profilyhome') }}">Profile</a>
-                                    <a class="dropdown-item" href="{{ route('home') }}">Cabinet</a>
+                                    <a class="dropdown-item" href="{{ route('index1') }}">Cabinet</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
 
                                        onclick="event.preventDefault();
@@ -94,6 +112,8 @@
         @show
 
         <main class="py-4">
+            @section('breadcrumbs', Breadcrumbs::render())
+            @yield('breadcrumbs')
             @include('layouts.partials.flash')
             @yield('content')
         </main>
@@ -106,8 +126,10 @@
         </div>
     </div>
 </footer>
+<!-- Scripts <script src="{{ asset('public/js/app.js') }}"></script>   -->
 
-<!-- Scripts   <script src="{{ asset('public/js/app.js') }}"></script>  -->
+
+@yield('scripts')
 
 
 

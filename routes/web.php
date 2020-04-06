@@ -13,16 +13,16 @@ use \Illuminate\Support\Facades\Auth;
 */
 
 /*Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-
 */
+
 
 Auth::routes(['verify'=>true]);
 
 Route::get('profile', function () {
-
 })->middleware('verified');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/login/{network}', 'Auth\NetworkController@redirect')->name('login.network');
@@ -57,10 +57,17 @@ Route::group([
     Route::post('/show/{advert}/favorites', 'FavoriteController@add')->name('favorites');
     Route::delete('/show/{advert}/favorites', 'FavoriteController@remove');
 
-
 });
 
+Route::group([
+    'prefix' => 'urad',
+    'as' => 'urad.',
+    'namespace' => 'Adverts',
+], function () {
 
+    //  Route::get('/{adverts_path?}', 'AdvertController@index')->name('indexus')->where( 'adverts_path', '.+');
+     Route::get('/{adverts_path?}', 'AdvertController@index')->name('index')->where('adverts_path', '.+');
+});
 
 Route::middleware('auth','can:admin-panel')->group(
      function () {
@@ -68,7 +75,7 @@ Route::middleware('auth','can:admin-panel')->group(
    Route::get('/admin','Admin\HomeController@index')->name('admin.home');
 
    Route::resource('/admin/users','Admin\UserController');
-         Route::post('/admin/users/show','Admin\UserController@');
+         Route::post('/admin/users/show','Admin\UserController@')->name('useris.show');
          Route::resource('/admin/regions','Admin\RegionController');
          Route::resource('/admin/adverts/categories','Admin\Adverts\CategoryController');
 
@@ -140,6 +147,16 @@ Route::group(
         'middleware' => ['auth', 'can:admin-panel'],
     ],
     function () {
+        Route::post('/ajax/upload/image', 'UploadController@image')->name('ajax.upload.image');
+
+        Route::resource('pages', 'PageController');
+
+        Route::group(['prefix' => 'pages/{page}', 'as' => 'pages.'], function () {
+            Route::post('/first', 'PageController@first')->name('first');
+            Route::post('/up', 'PageController@up')->name('up');
+            Route::post('/down', 'PageController@down')->name('down');
+            Route::post('/last', 'PageController@last')->name('last');
+        });
 
         Route::group(['prefix' => 'banners', 'as' => 'banners.'], function () {
             Route::get('/', 'BannerController@index')->name('index');
@@ -151,6 +168,9 @@ Route::group(
             Route::post('/{banner}/reject', 'BannerController@reject');
             Route::post('/{banner}/pay', 'BannerController@pay')->name('pay');
             Route::delete('/{banner}/destroy', 'BannerController@destroy')->name('destroy');
+
+
+
         });
     }
 );
@@ -187,7 +207,9 @@ Route::group(
         });
     }
 );
-
-Route::get('/{adverts_path?}', 'Adverts\AdvertController@index')->name('index')->where( 'adverts_path', '.+');
-// Route::get('/{adverts_path?}', 'Adverts\AdvertController@index')->name('index')->where(!'create', 'adverts_path', '.+');
 Route::get('/', 'StartController@index')->name('start');
+//Route::get('/{adverts_path?}', 'Adverts\AdvertController@index')->name('index')->where( 'adverts_path', '.+');
+
+//Route::get('/', 'StartController@index')->name('start');
+
+Route::get('/{page_path}', 'PageController@show')->name('page')->where('page_path', '.+');

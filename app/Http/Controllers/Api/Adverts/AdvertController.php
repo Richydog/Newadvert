@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Api\Adverts;
 
-use App\Entity\Adverts\Advert\Advert;
-use App\Entity\Adverts\Category;
-use App\Entity\Region;
+use App\Advert;
+use App\Model\Adverts\Category;
+use App\Model\Region;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Adverts\SearchRequest;
 use App\Http\Resources\Adverts\AdvertDetailResource;
 use App\Http\Resources\Adverts\AdvertListResource;
 use App\Http\Router\AdvertsPath;
-use App\ReadModel\AdvertReadRepository;
+//use App\ReadModel\AdvertReadRepository;
 use App\UseCases\Adverts\SearchService;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;

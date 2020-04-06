@@ -1,7 +1,7 @@
 <?php
 
 use App\Model\Adverts\Category;
-//use App\Entity\Page;
+use App\Model\Page;
 use App\Model\Region;
 use App\Http\Router\AdvertsPath;
 use App\Http\Router\PagePath;
@@ -15,7 +15,7 @@ if (! function_exists('adverts_path')) {
             ->withCategory($category);
     }
 }
-/*
+
 if (! function_exists('page_path')) {
 
     function page_path(Page $page)
@@ -23,4 +23,4 @@ if (! function_exists('page_path')) {
         return app()->make(PagePath::class)
             ->withPage($page);
     }
-}*/
+}

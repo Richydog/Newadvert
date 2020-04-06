@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 class RegionController extends Controller
 {
 
@@ -32,7 +33,7 @@ class RegionController extends Controller
         $this->validate($request, [
             'name' => 'required|string|max:255|unique:regions,name,NULL,id,parent_id,' . ($request['parent'] ?: 'NULL'),
             'slug' => 'required|string|max:255|unique:regions,slug,NULL,id,parent_id,' . ($request['parent'] ?: 'NULL'),
-            'parent' => 'optional|exists:regions,id',
+       //     'parent' => 'optional|exists:regions,id',
         ]);
 
         $region = Region::create([
@@ -41,7 +42,7 @@ class RegionController extends Controller
             'parent_id' => $request['parent'],
         ]);
 
-        return redirect()->route('admin.regions.show', $region);
+        return redirect()->route('regions.show', $region);
     }
 
     public function show(Region $region)

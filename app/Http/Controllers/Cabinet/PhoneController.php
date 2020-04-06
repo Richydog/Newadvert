@@ -13,8 +13,9 @@ class PhoneController extends Controller
 {
   //  private $sms;
   //  public function __construct(SmsSender $sms)
-
-
+    /*
+* @property string $phone
+*/
     public function request(Request $request){
 
         $user=Auth::user();
