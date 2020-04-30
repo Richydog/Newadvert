@@ -68,8 +68,20 @@
                 @foreach ($adverts as $advert)
                     <div class="advert">
                         <div class="row">
-                            <div class="col-md-3">
-                                <div style="height: 180px; background: #f6f6f6; border: 1px solid #ddd"></div>
+                            <div class="col-md-2">
+                                <div style="height: 180px; background: #f6f6f6; border: 1px solid #ddd">
+                                    @foreach ($advert->photos as $pat)
+                                        @if ($loop->first)
+
+                                        <p><img  src="{{ asset('/storage/'.$pat->file) }}" height="200px"width="200" alt=""></p>
+
+                                        @endif
+
+                                    @endforeach
+
+                                </div>
+
+
                             </div>
                             <div class="col-md-9">
                                 <span class="float-right">{{ $advert->price }}</span>

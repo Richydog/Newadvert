@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Adverts;
-
+use App\Model\Adverts\Advert\Photo;
 use App\Advert;
 use App\Model\Adverts\Category;
 use App\Model\Region;
@@ -33,6 +33,7 @@ class AdvertController extends Controller
         $result = $this->search->search($category, $region, $request, 20, $request->get('page', 1));
 
         $adverts = $result->adverts;
+
         $regionsCounts = $result->regionsCounts;
         $categoriesCounts = $result->categoriesCounts;
 

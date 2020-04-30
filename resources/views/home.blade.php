@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('breadcrumbs', '')
 @section('content')
-    <p><a href="{{route('adverts.create')}}" class="btn btn-success">Add Advert</a></p>
+    <!--<p><a href="{{route('adverts.create')}}" class="btn btn-success">Add Advert</a></p>-->
 
 
     <div class="card card-default mb-3">
@@ -49,7 +49,16 @@
                     <div class="advert">
                         <div class="row">
                             <div class="col-md-3">
-                                <div style="height: 180px; background: #f6f6f6; border: 1px solid #ddd"></div>
+                                <div style="height: 180px; width:180px; background: #f6f6f6; border: 1px solid #ddd">
+                                @foreach ($advert->photos as $pat)
+                                        @if ($loop->first)
+                                    <p>    <img  src="{{ asset('/storage/'.$pat->file) }}" height="180px"width="180" alt=""></p>
+
+                                        @endif
+                                @endforeach
+
+                                </div>
+
                             </div>
                             <div class="col-md-9">
                                 <span class="float-right">{{ $advert->price }}</span>

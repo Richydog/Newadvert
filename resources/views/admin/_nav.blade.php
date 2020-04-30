@@ -21,7 +21,7 @@
         <li class="nav-item"><a class="nav-link{{ $page === 'users' ? ' active' : '' }}" href="{{ route('users.index') }}">Users</a></li>
     @endcan
 
-   <!-- @can ('manage-tickets')
+   @can ('manage-tickets')
         <li class="nav-item"><a class="nav-link{{ $page === 'tickets' ? ' active' : '' }}" href="{{ route('admin.tickets.index') }}">Tickets</a></li>
-    @endcan-->
+    @endcan
 </ul>

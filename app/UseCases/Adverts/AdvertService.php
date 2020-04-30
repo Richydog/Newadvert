@@ -2,9 +2,12 @@
 
 
 namespace App\UseCases\Adverts;
+
+use App\Events\Advert\ModerationPassed;
 use App\Advert;
 use App\Model\Adverts\Category;
 use App\Model\Region;
+use App\Notifications\Advert\ModerationPassedNotification;
 use App\User;
 use App\Http\Requests\Adverts\CreateRequest;
 use Carbon\Carbon;
@@ -94,7 +97,9 @@ class AdvertService
     {
         $advert = $this->getAdvert($id);
         $advert->moderate(Carbon::now());
-       // event(new ModerationPassed($advert));
+     //   event(new ModerationPassed($advert));
+$advert->user->notify(new ModerationPassedNotification($advert));
+
     }
 
     public function reject($id, RejectRequest $request): void

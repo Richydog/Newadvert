@@ -10,6 +10,7 @@ use App\Model\Region;
 use Illuminate\Database\Eloquent\Builder;
 use App\Model\Adverts\Advert\Value;
 use App\Model\Adverts\Advert\Photo;
+use App\Model\Adverts\Advert\Dialog\Dialog;
 /**
  * @property int $id
  * @property int $user_id
@@ -192,4 +193,52 @@ class Advert extends Model
             $query->where('user_id', $user->id);
         });
     }
+
+    public function writeClientMessage(int $fromId, string $message): void
+    {
+        $this->getOrCreateDialogWith($fromId)->writeMessageByClient($fromId, $message);
+    }
+
+    public function writeOwnerMessage(int $toId, string $message): void
+    {
+        $this->getDialogWith($toId)->writeMessageByOwner($this->user_id, $message);
+    }
+
+    public function readClientMessages(int $userId): void
+    {
+        $this->getDialogWith($userId)->readByClient();
+    }
+
+    public function readOwnerMessages(int $userId): void
+    {
+        $this->getDialogWith($userId)->readByOwner();
+    }
+
+    private function getDialogWith(int $userId): Dialog
+    {
+        $dialog = $this->dialogs()->where([
+            'user_id' => $this->user_id,
+            'client_id' => $userId,
+        ])->first();
+        if (!$dialog) {
+            throw new \DomainException('Dialog is not found.');
+        }
+        return $dialog;
+    }
+
+    private function getOrCreateDialogWith(int $userId): Dialog
+    {
+        if ($userId === $this->user_id) {
+            throw new \DomainException('Cannot send message to myself.');
+        }
+        return $this->dialogs()->firstOrCreate([
+            'user_id' => $this->user_id,
+            'client_id' => $userId,
+        ]);
+    }
+    public function dialogs()
+    {
+        return $this->hasMany(Dialog::class, 'advert_id', 'id');
+    }
+
 }

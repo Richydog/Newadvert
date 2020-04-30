@@ -6,11 +6,12 @@ use App\Model\Adverts\Category;
 use App\Model\Banner\Banner;
 use App\Model\Page;
 use App\Model\Region;
-//use App\Entity\Ticket\Ticket;
+use App\Model\Ticket\Ticket;
 use App\User;
 use App\Http\Router\AdvertsPath;
 use App\Http\Router\PagePath;
 use DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator as Crumbs;
+
 Breadcrumbs::register('start', function (Crumbs $crumbs) {
     $crumbs->push('Start', route('start'));
 });
@@ -324,11 +325,15 @@ Breadcrumbs::register('admin/adverts.admin.edit', function (Crumbs $crumbs, Adve
     $crumbs->push($advert->title, route('admin/adverts.admin.edit', $advert));
 });
 
-Breadcrumbs::register('admin.adverts.adverts.reject', function (Crumbs $crumbs, Advert $advert) {
+Breadcrumbs::register('admin/adverts.admin.reject', function (Crumbs $crumbs, Advert $advert) {
     $crumbs->parent('admin.home');
-    $crumbs->push($advert->title, route('admin.adverts.adverts.reject', $advert));
+    $crumbs->push($advert->title, route('admin/adverts.admin.reject', $advert));
 });
 
+Breadcrumbs::register('admin/adverts.admin.photos', function (Crumbs $crumbs, Advert $advert) {
+    $crumbs->parent('admin.home');
+    $crumbs->push($advert->title, route('admin/adverts.admin.photos', $advert));
+});
 // Advert Categories
 
 Breadcrumbs::register('categories.index', function (Crumbs $crumbs) {

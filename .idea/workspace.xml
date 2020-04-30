@@ -2,259 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d10d0a90-a92a-4d11-89b1-e5a7274950ea" name="Default" comment="category">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Console/Commands/Api/DocCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Adverts/AdvertDetailResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Adverts/AdvertListResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/User/ProfileResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/ViewComposers/MenuPagesComposer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Ticket/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Ticket/Status.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Ticket/Ticket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/UseCases/Profile/PhoneService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/UseCases/Profile/ProfileService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/purifier.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/summernote/dist/summernote.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/summernote/dist/summernote.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/summernote/dist/summernote.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/summernote/dist/summernote.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/summernote/summernote.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/summernote/summernote.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/summernote/summernote.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/summernote/summernote.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/summernote.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/font/summernote.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/font/summernote.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/font/summernote.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/font/summernote.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ar-AR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ar-AR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ar-AR.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-az-AZ.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-az-AZ.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-az-AZ.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-bg-BG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-bg-BG.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-bg-BG.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ca-ES.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ca-ES.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ca-ES.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-cs-CZ.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-cs-CZ.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-cs-CZ.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-da-DK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-da-DK.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-da-DK.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-de-DE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-de-DE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-de-DE.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-el-GR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-el-GR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-el-GR.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-es-ES.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-es-ES.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-es-ES.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-es-EU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-es-EU.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-es-EU.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-fa-IR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-fa-IR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-fa-IR.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-fi-FI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-fi-FI.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-fi-FI.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-fr-FR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-fr-FR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-fr-FR.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-gl-ES.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-gl-ES.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-gl-ES.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-he-IL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-he-IL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-he-IL.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-hr-HR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-hr-HR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-hr-HR.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-hu-HU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-hu-HU.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-hu-HU.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-id-ID.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-id-ID.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-id-ID.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-it-IT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-it-IT.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-it-IT.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ja-JP.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ja-JP.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ja-JP.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ko-KR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ko-KR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ko-KR.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-lt-LT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-lt-LT.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-lt-LT.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-lt-LV.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-lt-LV.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-lt-LV.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-mn-MN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-mn-MN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-mn-MN.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-nb-NO.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-nb-NO.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-nb-NO.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-nl-NL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-nl-NL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-nl-NL.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-pl-PL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-pl-PL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-pl-PL.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-pt-BR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-pt-BR.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-pt-PT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-pt-PT.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-pt-PT.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ro-RO.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ro-RO.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ro-RO.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ru-RU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ru-RU.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ru-RU.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sk-SK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sk-SK.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sk-SK.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sl-SI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sl-SI.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sl-SI.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sr-RS-Latin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sr-RS-Latin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sr-RS-Latin.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sr-RS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sr-RS.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sr-RS.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sv-SE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sv-SE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-sv-SE.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ta-IN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ta-IN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-ta-IN.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-th-TH.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-th-TH.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-th-TH.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-tr-TR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-tr-TR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-tr-TR.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-uk-UA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-uk-UA.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-uk-UA.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-uz-UZ.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-uz-UZ.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-uz-UZ.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-vi-VN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-vi-VN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-vi-VN.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-zh-CN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-zh-CN.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-zh-TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-zh-TW.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/lang/summernote-zh-TW.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/plugin/databasic/summernote-ext-databasic.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/plugin/databasic/summernote-ext-databasic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/plugin/hello/summernote-ext-hello.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/plugin/specialchars/summernote-ext-specialchars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-bs4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-bs4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-bs4.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-bs4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-bs4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-bs4.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-bs4.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-lite.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-lite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-lite.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-lite.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-lite.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-lite.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote-lite.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote.min.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote-0.8.16-dist/summernote.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/summernote.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/_nav.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/page.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2a99527e-ede4-4754-bf77-f1d8033d3969.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2a99527e-ede4-4754-bf77-f1d8033d3969.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Events/Advert/ModerationPassed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TicketController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Cabinet/TicketController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Adverts/Advert/Dialog/Dialog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Adverts/Advert/Dialog/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Notifications/Advert/ModerationPassedNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Notifications/SmsChannel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/UseCases/Tickets/TicketService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2018_03_30_132456_create_tickets_tables.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/_nav.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cabinet/tickets/_nav.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cabinet/tickets/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cabinet/tickets/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cabinet/tickets/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/frocya.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frocya.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RegionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RegionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Adverts/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Adverts/AdvertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Adverts/FavoriteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Adverts/FavoriteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/User/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/User/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Cabinet/PhoneController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Cabinet/PhoneController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Advert.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Advert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/Advert/ExpireCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/Advert/ExpireCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Adverts/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Adverts/AdvertController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Router/PagePath.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Router/PagePath.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Ticket/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Ticket/Message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Ticket/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Ticket/Status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Ticket/Ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Ticket/Ticket.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/CacheServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/CacheServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/UseCases/Adverts/AdvertService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/UseCases/Adverts/AdvertService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_nav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/regions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/regions/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adverts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adverts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adverts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cabinet/adverts/create/advert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabinet/adverts/create/advert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cabinet/adverts/_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabinet/adverts/_nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cabinet/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabinet/adverts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cabinet/banners/_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabinet/banners/_nav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -440,6 +231,9 @@
       <path value="$PROJECT_DIR$/vendor/davejamesmiller/laravel-breadcrumbs" />
       <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
       <path value="$PROJECT_DIR$/vendor/mews/purifier" />
+      <path value="$PROJECT_DIR$/vendor/predis/bin" />
+      <path value="$PROJECT_DIR$/vendor/predis/examples" />
+      <path value="$PROJECT_DIR$/vendor/predis/src" />
     </include_path>
   </component>
   <component name="ProjectId" id="1UMw5GkhxXl2sWQamgpS5OWUZzy" />
@@ -455,7 +249,7 @@
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="preferences.redisPlugin" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -2869,7 +2663,25 @@
       <workItem from="1585572651352" duration="3800000" />
       <workItem from="1585809539793" duration="1312000" />
       <workItem from="1585892811624" duration="1772000" />
-      <workItem from="1586149675154" duration="3159000" />
+      <workItem from="1586149675154" duration="4363000" />
+      <workItem from="1586616191780" duration="1297000" />
+      <workItem from="1586666557721" duration="5713000" />
+      <workItem from="1586763701664" duration="3054000" />
+      <workItem from="1587112033503" duration="12752000" />
+      <workItem from="1587180274983" duration="23314000" />
+      <workItem from="1587273116749" duration="2932000" />
+      <workItem from="1587386618102" duration="3643000" />
+      <workItem from="1587443068139" duration="2843000" />
+      <workItem from="1587534246102" duration="4293000" />
+      <workItem from="1587543626688" duration="7421000" />
+      <workItem from="1587562209654" duration="3644000" />
+      <workItem from="1587618388170" duration="3518000" />
+      <workItem from="1587708388521" duration="7176000" />
+      <workItem from="1587794341645" duration="2771000" />
+      <workItem from="1587876641103" duration="4425000" />
+      <workItem from="1587966591491" duration="7571000" />
+      <workItem from="1588050502157" duration="4755000" />
+      <workItem from="1588223218397" duration="4694000" />
     </task>
     <task id="LOCAL-00001" summary="category">
       <created>1565951701232</created>

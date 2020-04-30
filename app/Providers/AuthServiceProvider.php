@@ -3,7 +3,7 @@
 namespace App\Providers;
 use App\Advert;
 use App\User;
-
+use App\Model\Ticket\Ticket;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use App\Model\Banner\Banner;
@@ -47,9 +47,9 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('manage-pages', function (User $user) {
             return $user->isAdmin();
         });
-    /*    Gate::define('manage-tickets', function (User $user) {
+        Gate::define('manage-tickets', function (User $user) {
             return $user->isAdmin() ;
-        });*/
+        });
         Gate::define('manage-adverts', function (User $user) {
             return $user->isAdmin() ;
         });
@@ -67,6 +67,9 @@ class AuthServiceProvider extends ServiceProvider
         });
         Gate::define('manage-own-banner', function (User $user, Banner $banner) {
             return $banner->user_id === $user->id ||$user->isAdmin()  ;
+        });
+        Gate::define('manage-own-ticket', function (User $user, Ticket $ticket) {
+            return $ticket->user_id === $user->id;
         });
     }
 

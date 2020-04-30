@@ -6,8 +6,9 @@ use App\Advert;
 use App\Model\Adverts\Category;
 use App\Model\Region;
 use Illuminate\Http\Request;
-
+use App\Model\Adverts\Advert\Photo;
 class StartController extends Controller
+
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +20,13 @@ class StartController extends Controller
         $regions = Region::roots()->orderBy('name')->getModels();
 
         $categories = Category::whereIsRoot()->defaultOrder()->getModels();
-        $adverts=Advert::all();
+
+$adverts=Advert::all();
+//$pats=$adverts->photos();
+//dd($adverts);
+
+
+
         return view('home', compact('regions', 'categories','adverts'));
 
        // return view('home');

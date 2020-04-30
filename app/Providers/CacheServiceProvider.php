@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use App\Entity\Adverts\Advert\Advert;
-use App\Entity\Region;
-use App\Entity\User\User;
+use App\Advert;
+use App\Model\Region;
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
