@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\MOdel\Ticket\Status;
+use App\Model\Ticket\Status;
 use App\Model\Ticket\Ticket;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Ticket\EditRequest;

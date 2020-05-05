@@ -20,8 +20,8 @@ class CreateNetworksTable extends Migration
 
         Schema::create('user_networks', function (Blueprint $table) {
             $table->integer('user_id')->references('id')->on('users')->onDelete('CASCADE');
-            $table->string('network');
-            $table->string('identity');
+            $table->string('network',100);
+            $table->string('identity',100);
             $table->primary(['user_id', 'identity']);
         });
     }

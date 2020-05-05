@@ -23,6 +23,23 @@ Auth::routes(['verify'=>true]);
 Route::get('profile', function () {
 })->middleware('verified');
 
+Route::get('/clear', function() {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+    Artisan::call('optimize:clear');
+    return "Кэш очищен.";
+
+});
+
+Route::get('/indexed', function() {
+    Artisan::call('search:reindex');
+
+    return "Переиндексация прошла";
+
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/login/{network}', 'Auth\NetworkController@redirect')->name('login.network');

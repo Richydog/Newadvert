@@ -2,49 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d10d0a90-a92a-4d11-89b1-e5a7274950ea" name="Default" comment="category">
-      <change afterPath="$PROJECT_DIR$/app/Events/Advert/ModerationPassed.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TicketController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Cabinet/TicketController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Adverts/Advert/Dialog/Dialog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Adverts/Advert/Dialog/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/Advert/ModerationPassedNotification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/SmsChannel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/UseCases/Tickets/TicketService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2018_03_30_132456_create_tickets_tables.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/_nav.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cabinet/tickets/_nav.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cabinet/tickets/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cabinet/tickets/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cabinet/tickets/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/frocya.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frocya.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/Advert/ReindexAdvert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Listeners/Advert/AdvertChangedListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Listeners/Advert/ModerationPassedListener.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Advert.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Advert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/Advert/ExpireCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/Advert/ExpireCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Adverts/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Adverts/AdvertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Ticket/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Ticket/Message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Ticket/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Ticket/Status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Ticket/Ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Ticket/Ticket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/CacheServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/CacheServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TicketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/UseCases/Adverts/AdvertService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/UseCases/Adverts/AdvertService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adverts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cabinet/adverts/_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabinet/adverts/_nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cabinet/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabinet/adverts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cabinet/banners/_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabinet/banners/_nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_03_10_132930_create_advert_attributes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_03_10_132930_create_advert_attributes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_03_30_132456_create_tickets_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_03_30_132456_create_tickets_tables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_11_095856_create_regions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_11_095856_create_regions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_14_085911_create_advert_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_14_085911_create_advert_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_06_150257_create_adverts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_06_150257_create_adverts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_14_132606_create_pages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_14_132606_create_pages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_03_164408_create_banners_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_03_164408_create_banners_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_15_162740_create_networks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_15_162740_create_networks_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -2681,7 +2655,12 @@
       <workItem from="1587876641103" duration="4425000" />
       <workItem from="1587966591491" duration="7571000" />
       <workItem from="1588050502157" duration="4755000" />
-      <workItem from="1588223218397" duration="4694000" />
+      <workItem from="1588223218397" duration="5365000" />
+      <workItem from="1588254413092" duration="651000" />
+      <workItem from="1588307474289" duration="10558000" />
+      <workItem from="1588428473175" duration="3850000" />
+      <workItem from="1588513545722" duration="3612000" />
+      <workItem from="1588688024663" duration="870000" />
     </task>
     <task id="LOCAL-00001" summary="category">
       <created>1565951701232</created>
@@ -2718,7 +2697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582900953347</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="category">
+      <created>1588228591207</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588228591207</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -16,6 +16,7 @@ use  App\Http\Requests\Adverts\PhotosRequest;
 use App\Http\Requests\Adverts\RejectRequest;
 use App\Http\Requests\Adverts\AttributesRequest;
 use App\Http\Requests\Adverts\EditRequest;
+use Illuminate\Support\Facades\Cache;
 class AdvertService
 {
     public function create($userId, $categoryId, $regionId, CreateRequest $request): Advert
@@ -97,9 +98,10 @@ class AdvertService
     {
         $advert = $this->getAdvert($id);
         $advert->moderate(Carbon::now());
-     //   event(new ModerationPassed($advert));
-$advert->user->notify(new ModerationPassedNotification($advert));
+    //    $advert->user->notify(new ModerationPassedNotification($advert));
+       event(new ModerationPassed($advert));
 
+//Cashe::tags(Advert::class)->flush();
     }
 
     public function reject($id, RejectRequest $request): void

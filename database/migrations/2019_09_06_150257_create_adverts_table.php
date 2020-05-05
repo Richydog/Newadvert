@@ -18,7 +18,7 @@ class CreateAdvertsTable extends Migration
             $table->integer('user_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->integer('category_id')->references('id')->on('advert_categories');
             $table->integer('region_id')->nullable()->references('id')->on('advert_regions');
-            $table->string('title');
+            $table->string('title',100);
             $table->integer('price');
             $table->text('address');
             $table->text('content');
@@ -32,14 +32,14 @@ class CreateAdvertsTable extends Migration
         Schema::create('advert_advert_values', function (Blueprint $table) {
             $table->integer('advert_id')->references('id')->on('advert_adverts')->onDelete('CASCADE');
             $table->integer('attribute_id')->references('id')->on('advert_attributes')->onDelete('CASCADE');
-            $table->string('value');
+            $table->string('value',100);
             $table->primary(['advert_id', 'attribute_id']);
         });
 
         Schema::create('advert_advert_photos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('advert_id')->references('id')->on('advert_adverts')->onDelete('CASCADE');
-            $table->string('file');
+            $table->string('file',100);
         });
     }
 

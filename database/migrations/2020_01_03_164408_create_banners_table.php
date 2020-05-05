@@ -15,7 +15,6 @@ class CreateBannersTable extends Migration
     {
         Schema::create('banner_banners', function (Blueprint $table) {
             $table->increments('id');
-
             $table->integer('user_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->integer('category_id')->references('id')->on('advert_categories');
             $table->integer('region_id')->nullable()->references('id')->on('regions');
@@ -24,11 +23,10 @@ class CreateBannersTable extends Migration
             $table->integer('limit');
             $table->integer('clicks')->nullable();
             $table->integer('cost')->nullable();
-            $table->string('url');
-            $table->string('format');
-            $table->string('file');
+            $table->string('url',100);
+            $table->string('format',100);
+            $table->string('file',100);
             $table->string('status', 16);
-
             $table->timestamps();
             $table->timestamp('published_at')->nullable();
         });
@@ -41,6 +39,6 @@ class CreateBannersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('banners');
+        Schema::dropIfExists('banner_banners');
     }
 }

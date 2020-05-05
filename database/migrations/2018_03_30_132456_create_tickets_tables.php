@@ -11,7 +11,7 @@ class CreateTicketsTables extends Migration
         Schema::create('ticket_tickets', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->references('id')->on('users')->onDelete('CASCADE');
-            $table->string('subject');
+            $table->string('subject',100);
             $table->text('content');
             $table->string('status', 16);
             $table->timestamps();
